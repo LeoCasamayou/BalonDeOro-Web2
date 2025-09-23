@@ -9,4 +9,4 @@ La entidad-relación se da gracias a la *id_equipo*, la cual vincula ambas tabla
 Leonel Casamayou - leonelcasamayou@gmail.com
 
 ## Diagrama Entidad-Relación
-![Diagrama DER](BalonDeOro.png)
+![Diagrama DER](der.png)
