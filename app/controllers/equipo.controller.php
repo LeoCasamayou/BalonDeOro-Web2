@@ -30,9 +30,9 @@ class EquipoController {
 
     public function create() {
         $this->mustBeLogged();
-        $nombre = trim($_POST['nombre'] ?? '');
+        $nombre    = trim($_POST['nombre'] ?? '');
         $fundacion = (int)($_POST['fundacion'] ?? 0);
-        $liga = trim($_POST['liga'] ?? '');
+        $liga      = trim($_POST['liga'] ?? '');
         if ($nombre && $fundacion && $liga) {
             $this->model->create($nombre, $fundacion, $liga);
         }
@@ -48,10 +48,10 @@ class EquipoController {
 
     public function update() {
         $this->mustBeLogged();
-        $id = (int)($_POST['id_equipo'] ?? 0);
-        $nombre = trim($_POST['nombre'] ?? '');
+        $id        = (int)($_POST['id_equipo'] ?? 0);
+        $nombre    = trim($_POST['nombre'] ?? '');
         $fundacion = (int)($_POST['fundacion'] ?? 0);
-        $liga = trim($_POST['liga'] ?? '');
+        $liga      = trim($_POST['liga'] ?? '');
         if ($id && $nombre && $fundacion && $liga) {
             $this->model->update($id, $nombre, $fundacion, $liga);
         }
