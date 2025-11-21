@@ -2,8 +2,7 @@ BalonDeOro – Parte 2 (Versión Corregida)
 
 Temática
 
-Proyecto basado en el Balón de Oro 2025 que permite gestionar jugadores, equipos y menciones honoríficas. Incluye vistas con CRUD completo, login seguro para acciones protegidas y una API REST para consultar y manipular menciones con filtros, ordenamiento y paginación.
-
+Proyecto basado en el Balón de Oro 2025 que permite gestionar jugadores, equipos y menciones honoríficas. Incluye vistas con CRUD completo y login seguro para acciones protegidas.
 
 Correcciones aplicadas (Parte 2)
 1. Se agregó la vista de detalle de mención.
