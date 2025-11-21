@@ -70,52 +70,6 @@ switch ($params[0]) {
         }
         break;
 
-        
-    // API REST // 
-
-    case 'api':
-        require_once __DIR__ . '/app/api/mencion.api.controller.php';
-        $api = new MencionApiController();
-
-        // /api/menciones
-        if ($params[1] === 'menciones') {
-
-            // GET /api/menciones
-            if ($_SERVER['REQUEST_METHOD'] === 'GET' && !isset($params[2])) {
-                $orden = $_GET['orden'] ?? null;
-                $api->getAll($orden);
-                break;
-            }
-
-            // GET /api/menciones/{id}
-            if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($params[2])) {
-                $api->getById((int)$params[2]);
-                break;
-            }
-
-            // POST /api/menciones
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                $api->create();
-                break;
-            }
-
-            // PUT /api/menciones/{id}
-            if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
-                $api->update((int)$params[2]);
-                break;
-            }
-
-            // DELETE /api/menciones/{id}
-            if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
-                $api->delete((int)$params[2]);
-                break;
-            }
-        }
-
-        // Si no coincide ninguna ruta API
-        http_response_code(400);
-        echo json_encode(["error" => "Ruta API no válida"]);
-        break;
 
     default:
         http_response_code(404);
